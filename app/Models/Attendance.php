@@ -27,12 +27,12 @@ class Attendance extends Model
     protected function casts(): array
     {
         return [
-            'date' => 'date',
-            'time_in' => 'datetime',
-            'time_out' => 'datetime',
-            'status' => 'string',
-            'late_minutes' => 'integer',
-            'overtime_minutes' => 'integer',
+            'date'              => 'date',
+            'time_in'           => 'datetime',
+            'time_out'          => 'datetime',
+            'status'            => 'string',
+            'late_minutes'      => 'integer',
+            'overtime_minutes'  => 'integer',
             'undertime_minutes' => 'integer',
         ];
     }

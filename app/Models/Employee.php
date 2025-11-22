@@ -31,10 +31,10 @@ class Employee extends Model
     protected function casts(): array
     {
         return [
-            'employee_id' => 'string',
+            'employee_id'              => 'string',
             'biometric_fingerprint_id' => 'string',
-            'date_hired' => 'date',
-            'status' => 'string',
+            'date_hired'               => 'date',
+            'status'                   => 'string',
         ];
     }
 

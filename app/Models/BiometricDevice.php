@@ -23,9 +23,9 @@ class BiometricDevice extends Model
     protected function casts(): array
     {
         return [
-            'device_id' => 'string',
-            'api_key' => 'string',
-            'status' => 'string',
+            'device_id'    => 'string',
+            'api_key'      => 'string',
+            'status'       => 'string',
             'last_ping_at' => 'datetime',
         ];
     }

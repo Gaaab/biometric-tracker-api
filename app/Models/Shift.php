@@ -23,11 +23,11 @@ class Shift extends Model
     protected function casts(): array
     {
         return [
-            'time_in' => 'datetime:H:i',
-            'time_out' => 'datetime:H:i',
-            'grace_period_minutes' => 'integer',
+            'time_in'                => 'datetime:H:i',
+            'time_out'               => 'datetime:H:i',
+            'grace_period_minutes'   => 'integer',
             'break_duration_minutes' => 'integer',
-            'is_active' => 'boolean',
+            'is_active'              => 'boolean',
         ];
     }
 

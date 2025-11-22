@@ -25,9 +25,9 @@ class OvertimeRequest extends Model
     protected function casts(): array
     {
         return [
-            'date' => 'date',
-            'hours' => 'decimal:2',
-            'status' => 'string',
+            'date'        => 'date',
+            'hours'       => 'decimal:2',
+            'status'      => 'string',
             'approved_at' => 'datetime',
         ];
     }
