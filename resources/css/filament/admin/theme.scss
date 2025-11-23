@@ -1,0 +1,29 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@source 'tailwind.config.js';
+
+.fi-sidebar-item-active > a {
+    @apply dark:bg-white #{!important};
+
+    & > svg, span {
+        @apply dark:text-primary-600 #{!important};
+    }
+}
+
+.fi-accordion-item {
+    button > span {
+        @apply dark:text-white/50 hover:dark:text-white #{!important};
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+.fi-sidebar-nav {
+    ul > li:last-child {
+        ul > li:last-child {
+            @apply mt-8;
+        }
+    }
+}
