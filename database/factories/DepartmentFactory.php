@@ -16,8 +16,22 @@ class DepartmentFactory extends Factory
      */
     public function definition(): array
     {
+        $departments = [
+            ['name' => 'Information Technology', 'code' => 'IT'],
+            ['name' => 'Human Resources', 'code' => 'HR'],
+            ['name' => 'Sales', 'code' => 'SALES'],
+            ['name' => 'Operations', 'code' => 'OPS'],
+            ['name' => 'Finance', 'code' => 'FIN'],
+            ['name' => 'Marketing', 'code' => 'MKT'],
+        ];
+
+        $dept = fake()->randomElement($departments);
+
         return [
-            //
+            'name'        => $dept['name'],
+            'code'        => $dept['code'],
+            'manager_id'  => null, // Will be set after employees are created
+            'description' => fake()->optional()->sentence(10),
         ];
     }
 }

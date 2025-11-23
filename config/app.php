@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'cms_url' => env('APP_CMS_URL', 'https://cms.localhost'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -123,4 +125,8 @@ return [
         'store'  => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'global_rate_limit'       => env('GLOBAL_RATE_LIMIT', 60),
+    'registration_rate_limit' => env('REGISTRATION_RATE_LIMIT', 60),
+    'login_attempt_count'     => env('LOGIN_ATTEMPT_COUNT', 3),
+    'login_decay_minutes'     => env('LOGIN_DECAY_MINUTES', 3),
 ];
