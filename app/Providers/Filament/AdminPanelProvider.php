@@ -38,6 +38,7 @@ class AdminPanelProvider extends PanelProvider
             ->breadcrumbs(false)
             ->brandLogoHeight('2rem')
             ->login()
+            ->default()
             ->when(
                 value: config('filament.using_subdomain'),
                 callback: fn (Panel $panel) => $panel->domain(config('app.cms_url')),

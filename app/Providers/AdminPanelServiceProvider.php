@@ -35,11 +35,6 @@ class AdminPanelServiceProvider extends PanelProvider
             ->default()
             ->login()
             ->breadcrumbs(false)
-            ->when(
-                value: config('filament.using_subdomain', false),
-                callback: fn (Panel $panel) => $panel->domain(config('app.cms_url')),
-                default: fn (Panel $panel) => $panel->path('admin')
-            )
             ->passwordReset(null, null)
             ->authPasswordBroker('admins')
             ->defaultThemeMode(ThemeMode::Light)
@@ -74,8 +69,8 @@ class AdminPanelServiceProvider extends PanelProvider
             ])
             ->renderHook(PanelsRenderHook::SIDEBAR_NAV_END, function () {
                 return View::make('filament.logout');
-            });
+            })
+            ->guessUsingSubdomain();
         // ->discoverFilamentFromModules() // Commented out - method doesn't exist in Filament v4
-        // ->guessUsingSubdomain(); // Commented out - method doesn't exist in Filament v4
     }
 }
